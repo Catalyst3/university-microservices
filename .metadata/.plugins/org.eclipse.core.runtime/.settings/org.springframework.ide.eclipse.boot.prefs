@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=Address-Microservice
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.3.2
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Demo project for Spring Boot microservices
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.aditya
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=Address-Microservice
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.aditya.demo
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=0.0.1-SNAPSHOT
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n
