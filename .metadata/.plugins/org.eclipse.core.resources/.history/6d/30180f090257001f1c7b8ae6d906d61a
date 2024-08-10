@@ -1,0 +1,5 @@
+package com.infybuzz.feignclients;
+
+public interface AddressFeignClient {
+
+}
