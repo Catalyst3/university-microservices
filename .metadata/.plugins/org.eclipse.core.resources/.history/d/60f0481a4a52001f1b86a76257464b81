@@ -1,8 +1,0 @@
-package com.infybuzz.request;
-
-public class CreateAddressRequest {
-	
-	private String street;
-	private String city;
-
-}

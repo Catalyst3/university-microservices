@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.infybuzz.response.AddressResponse;
 
-@FeignClient(name = "address-service", path = "/api/address")
+@FeignClient(name = "address-service")
 public interface AddressFeignClient {
 	
 	@GetMapping("/getById/{id}")
