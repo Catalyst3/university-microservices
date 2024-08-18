@@ -51,8 +51,12 @@ Initially, the services communicated using WebClient. Later, Feign Client was in
   - Duration for which the circuit remains open.
   - Fallback methods for handling service degradation.
 - Actuator endpoints are enabled for monitoring circuit breaker metrics and service health.
-
-## Getting Started
+### Distributed Tracing with Sleuth and Zipkin
+- **Spring Cloud Sleuth:** Added for distributed tracing across microservices. It automatically generates trace IDs and spans for each request.
+- **Zipkin:** Configured as the tracing backend, enabling tracking of requests across services via the Zipkin UI.
+### Monitoring and Health Checks
+- **Spring Boot Actuator:** Provides endpoints for monitoring the health and status of services.
+- **Zipkin UI:** Access the tracing UI to visualize service dependencies and latencies.
 
 ### Prerequisites
 
@@ -87,6 +91,7 @@ Initially, the services communicated using WebClient. Later, Feign Client was in
   - `http://localhost:9090/student-service/api/student/getById/{id}` (This call will invoke the fallback method).
 - Monitor the health status using the actuator endpoint:
   - `http://localhost:9090/student-service/actuator/health`
+  - `Visit http://localhost:9411 to open the Zipkin UI.`
 
 ## Future Enhancements
 
@@ -94,6 +99,7 @@ Initially, the services communicated using WebClient. Later, Feign Client was in
 - Add more detailed logging and monitoring.
 - Expand the application to include more services and features.
 - Enhance the load balancer with dynamic scaling based on traffic.
+- Spring Cloud Sleuth & Zipkin: For distributed tracing.
 
 ## Contributing
 
