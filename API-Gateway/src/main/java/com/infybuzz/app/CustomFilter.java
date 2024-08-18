@@ -12,21 +12,26 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 @Configuration
-public class CustomFilter implements GlobalFilter{
+public class CustomFilter implements GlobalFilter {
+
+	Logger logger = LoggerFactory.getLogger(CustomFilter.class);
 
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-		Logger logger = LoggerFactory.getLogger(CustomFilter.class);
 		
-		ServerHttpRequest httpRequest =exchange.getRequest();
-		logger.info("Authorization"+ httpRequest.getHeaders().getFirst("Authorization"));
-		return chain.filter(exchange).then(Mono.fromRunnable(()-> {
-			//before API Gateway passes response to Consumer
-			//POst Filter
-			ServerHttpResponse httpResponse = exchange.getResponse();
+		ServerHttpRequest request = exchange.getRequest();
+		
+		if (request.getURI().toString().contains("/api/student/")) {
 			
-			logger.info("Post Filter: "+httpResponse.getStatusCode());
+		}
+		
+		logger.info("Authorization = " + request.getHeaders().getFirst("Authorization"));
+		
+		return chain.filter(exchange).then(Mono.fromRunnable(() -> {
+			ServerHttpResponse response = exchange.getResponse();
+			
+			logger.info("Post Filter = " + response.getStatusCode());
 		}));
-				
 	}
+	
 }
