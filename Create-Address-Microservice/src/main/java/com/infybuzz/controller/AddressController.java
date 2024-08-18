@@ -13,22 +13,20 @@ import com.infybuzz.response.AddressResponse;
 import com.infybuzz.service.AddressService;
 
 @RestController
-@RequestMapping("api/address")
+@RequestMapping("/api/address")
 public class AddressController {
+
 	@Autowired
 	AddressService addressService;
-	
+
 	@PostMapping("/create")
-	public AddressResponse createAddress(@RequestBody CreateAddressRequest createAddressRequest)
-	{
+	public AddressResponse createAddress (@RequestBody CreateAddressRequest createAddressRequest) {
 		return addressService.createAddress(createAddressRequest);
 	}
 	
 	@GetMapping("/getById/{id}")
-	public AddressResponse getById(@PathVariable long id)
-	{
+	public AddressResponse getById(@PathVariable long id) {
 		return addressService.getById(id);
 	}
 	
-
 }

@@ -12,24 +12,27 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @Service
 public class CommonService {
+	
 	Logger logger = LoggerFactory.getLogger(CommonService.class);
-	int count = 1;
-
+	
+	long count = 1;
+	
 	@Autowired
 	AddressFeignClient addressFeignClient;
 
-	@CircuitBreaker(name = "addressService", fallbackMethod="fallbackGetAddressById")
+	@CircuitBreaker(name = "addressService",
+			fallbackMethod = "fallbackGetAddressById")
 	public AddressResponse getAddressById (long addressId) {
-		logger.info("Count= "+count++);
+		logger.info("count = " + count);
+		count++;
 		AddressResponse addressResponse = 
 				addressFeignClient.getById(addressId);
 		
 		return addressResponse;
 	}
 	
-	public AddressResponse fallbackGetAddressById (long addressId, Throwable throwable) {
-		logger.error("Error= "+throwable);
-		//Dummy Data
+	public AddressResponse fallbackGetAddressById (long addressId, Throwable th) {
+		logger.error("Error = " + th);
 		return new AddressResponse();
 	}
 }
