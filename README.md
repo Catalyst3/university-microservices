@@ -58,7 +58,6 @@ Initially, the services communicated using WebClient. Later, Feign Client was in
 
 - JDK 8 or later
 - Maven
-- Docker (optional for running Eureka Server)
 
 ### Running the Application
 
