@@ -158,6 +158,12 @@ This updated section now includes all the necessary steps for running the Config
 - Spring Cloud Sleuth & Zipkin: For distributed tracing.
 - Spring Cloud Config Server: For unified management of configuration properties across all microservices.
 
+  You can add the following section to your `README.md` file to acknowledge the course and certification:
+
+### Acknowledgements
+
+To complete this project, I utilized the Udemy course **"Microservices with Java Spring Boot and Spring Cloud"** by **Infybuzz Learnings**. The course provided valuable insights and hands-on experience in building and managing microservices with Spring Boot and Spring Cloud. I hold a certificate for this course.
+
 ## Contributing
 
 Feel free to fork the repository and submit pull requests. For any issues or suggestions, please open an issue on GitHub.
