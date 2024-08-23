@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="E:\Microservices Course\Create-Config-Server"/>
+			<item value="E:\Microservices Course\Config-Server"/>
 			<item value="E:\Microservices Course\API-Gateway"/>
 			<item value="E:\Microservices Course\Create-Student-Microservice"/>
 			<item value="E:\Microservices Course\Create-Address-Microservice"/>
