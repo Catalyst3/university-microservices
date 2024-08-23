@@ -94,7 +94,7 @@ This project began as a monolithic application named "University," designed to m
 - JDK 8 or later
 - Maven
 
-### Running the Application
+## Running the Application
 
 1. **Eureka Server**:  
    - Navigate to the `eureka-server` directory and run:
@@ -125,9 +125,7 @@ This project began as a monolithic application named "University," designed to m
      ```bash
      mvn spring-boot:run
      ```
-     
-This updated section now includes all the necessary steps for running the Config Server, API Gateway, and Eureka Server along with the other microservices.
-### Testing the Application
+ ## Testing the Application
 
 - Use Postman or any API testing tool to interact with the endpoints listed above.
 - Ensure Eureka Server is running before starting the microservices.
@@ -158,9 +156,7 @@ This updated section now includes all the necessary steps for running the Config
 - Spring Cloud Sleuth & Zipkin: For distributed tracing.
 - Spring Cloud Config Server: For unified management of configuration properties across all microservices.
 
-  You can add the following section to your `README.md` file to acknowledge the course and certification:
-
-### Acknowledgements
+## Acknowledgements
 
 To complete this project, I utilized the Udemy course **"Microservices with Java Spring Boot and Spring Cloud"** by **Infybuzz Learnings**. The course provided valuable insights and hands-on experience in building and managing microservices with Spring Boot and Spring Cloud. I hold a certificate for this course.
 
